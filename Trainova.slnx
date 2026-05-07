@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Trainova.Api/Trainova.Api.csproj" />
+    <Project Path="src/Trainova.Application/Trainova.Application.csproj" />
+    <Project Path="src/Trainova.Domain/Trainova.Domain.csproj" />
+    <Project Path="src/Trainova.Infrastructure/Trainova.Infrastructure.csproj" />
+  </Folder>
+</Solution>

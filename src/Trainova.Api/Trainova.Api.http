@@ -1,0 +1,6 @@
+@Trainova.Api_HostAddress = http://localhost:5217
+
+GET {{Trainova.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
