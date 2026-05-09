@@ -1,6 +1,7 @@
 using System.Net;
 using System.Text.Json;
 using FluentValidation;
+using Trainova.Domain.Exceptions;
 
 namespace Trainova.Api.Middleware;
 
@@ -30,7 +31,11 @@ public class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<Exception
                 "Validation failed",
                 ve.Errors.Select(e => e.ErrorMessage).ToArray()),
 
-            // Todo: Add Domain Exception
+            // Todo: Maybe refactor later
+            DomainException de => (
+                HttpStatusCode.BadRequest,
+                "Domain rule violation",
+                new[] { de.Message }),
 
             KeyNotFoundException => (
                 HttpStatusCode.NotFound,
