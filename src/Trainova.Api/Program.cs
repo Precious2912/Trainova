@@ -13,7 +13,7 @@ builder.Host.UseSerilog((ctx, lc) => lc
 
 // Add services to the container.
 builder.Services.AddApplication();
-builder.Services.AddInfrastructure();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
