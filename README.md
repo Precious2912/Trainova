@@ -5,6 +5,8 @@ A train booking API built with ASP.NET Core, designed using Clean Architecture p
 ## Tech Stack
 
 - **Framework**: ASP.NET Core (.NET 10)
+- **Database**: PostgreSQL with EF Core
+- **Logging**: Serilog
 
 ## Status
 
